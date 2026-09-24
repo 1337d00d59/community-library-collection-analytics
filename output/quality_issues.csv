@@ -1,0 +1,11 @@
+period,community_id,collection_family,kind,detail
+2026-02,CIRR,audio_video,incomplete_change_data,withdrawal_log_unavailable
+2026-04,ECHO,adult_print,missing_closing,report_not_received
+2026-04,ECHO,adult_print,incomplete_change_data,report_not_received
+2026-04,ECHO,audio_video,missing_closing,report_not_received
+2026-04,ECHO,audio_video,incomplete_change_data,report_not_received
+2026-04,ECHO,community_kits,missing_closing,report_not_received
+2026-04,ECHO,community_kits,incomplete_change_data,report_not_received
+2026-04,ECHO,youth_print,missing_closing,report_not_received
+2026-04,ECHO,youth_print,incomplete_change_data,report_not_received
+2026-09,GOLD,youth_print,reconciliation_mismatch,"Observed 11,770; expected 11,751; difference +19"
