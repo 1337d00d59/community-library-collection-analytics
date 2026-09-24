@@ -61,7 +61,7 @@ Use `--ledger`, `--start`, `--months`, and `--out` with another ledger of the sa
 
 ## Tableau Public companion
 
-The `tableau/data/` folder includes four import-ready CSVs at separate, documented grains: 12 safe network-month totals, 432 community/family records, nine current community summaries, and ten quality findings. The [Tableau build guide](tableau/BUILD_GUIDE.md) specifies an interactive overview, community explorer, calculated reconciliation check, and a [three-point story](tableau/STORYBOARD.md).
+The `tableau/data/` folder includes four import-ready CSVs at separate, documented grains: 12 safe network-month totals, 432 community/family records, nine current community summaries, and ten quality findings. The [Tableau build guide](tableau/BUILD_GUIDE.md) explains the design and the [sheet-by-sheet workbook specification](tableau/WORKBOOK_SPEC.md) gives exact fields, calculations, dashboard structure, and checks for the [three-point story](tableau/STORYBOARD.md).
 
 The Tableau workbook is **not yet authored or published**. These files and instructions make it possible to build and verify one in Tableau Public without altering the Python/Matplotlib pipeline. The network table leaves April's total blank; summing the detailed rows across all communities would falsely turn the missing Echo Meadow report into a partial system total. A published Tableau URL can be added after the actual workbook has been created and checked.
 
@@ -97,6 +97,7 @@ community-library-collection-analytics/
 ├── docs/verification.md
 ├── tableau/
 │   ├── BUILD_GUIDE.md
+│   ├── WORKBOOK_SPEC.md
 │   ├── STORYBOARD.md
 │   └── data/four Tableau-ready CSVs
 └── output/

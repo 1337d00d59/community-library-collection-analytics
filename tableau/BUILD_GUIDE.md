@@ -2,7 +2,7 @@
 
 ## Status and purpose
 
-This directory is an **import-ready Tableau build kit**, not a completed Tableau workbook or a published viz. The Python/Matplotlib pipeline remains fully reproducible. The Tableau layer adds direct exploration: selecting a community, comparing collection families, changing a measure, and following a three-part data story. Creating a real Tableau workbook in Tableau Public is the remaining authoring step.
+This directory is an **import-ready Tableau build kit**, not a completed Tableau workbook or a published viz. The Python/Matplotlib pipeline remains fully reproducible. The Tableau layer adds direct exploration: selecting a community, comparing collection families, changing a measure, and following a three-part data story. The [workbook specification](WORKBOOK_SPEC.md) gives exact sheet construction and checks; creating the real Tableau workbook remains the authoring step.
 
 Tableau Public supports CSV and browser authoring; the free Desktop Public Edition can also save a workbook locally before publication. Published workbooks and their data are public, and CSV-based sources do not refresh automatically. This project's data is entirely fictional. [Tableau Public FAQ](https://help.tableau.com/current/pro/desktop/en-us/public_faq.htm) · [Save locally or to Public](https://help.tableau.com/current/pro/desktop/en-us/publish_workbooks_tableaupublic.htm)
 
@@ -52,7 +52,7 @@ Show the parameter control. Use a dynamic title that names the selected metric a
 
 Use `community_latest.csv` for a horizontal ranking of `current_total`, coloring or marking `status`. Use `community_family_monthly.csv`, filtered to `is_latest=TRUE`, for a community × collection-family heatmap. Then create a single-community 12-month detail view from the same long table, showing the selected family or all four distinct families.
 
-Put the heatmap and single-community detail on one dashboard. Make the heatmap **Use as Filter**, or add an explicit Community filter shared between the two sheets. Selecting a community should update the detail view; a collection-family selection can further narrow it. Tableau documents this dashboard interaction as a [filter action](https://help.tableau.com/current/pro/desktop/en-us/actions_dashboards.htm).
+Put the heatmap and single-community detail on one dashboard. Use the **Community to inspect** parameter and single-community calculation in the [workbook specification](WORKBOOK_SPEC.md#3-controls-and-independent-calculation) so the detail has a safe initial selection. A collection-family filter can narrow that detail. A later parameter action can make heatmap clicks update the selection; Tableau also supports [filter actions](https://help.tableau.com/current/pro/desktop/en-us/actions_dashboards.htm), but verify that any action preserves the one-community restriction.
 
 Keep the detail view restricted to **one community at a time**. Summing the long table across all communities in April would silently produce a partial network total. The overview must use `network_monthly.csv` for system totals.
 
