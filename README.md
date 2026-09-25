@@ -1,8 +1,14 @@
 # Community Library Collection Analytics
 
-A self-contained Python portfolio project that turns a **fictional collection-change ledger** into validated monthly statistics, four board-friendly Matplotlib charts, a concise Markdown brief, and Tableau Public-ready data for interactive storytelling.
+A self-contained Python portfolio project that turns a **fictional collection-change ledger** into validated monthly statistics, four board-friendly Matplotlib charts, a concise Markdown brief, and an interactive Tableau Public visualization.
 
 Every community name, code, event, and count is fictional. The project begins with a new CSV ledger and can be reproduced from its sample-data generator.
+
+## Live Tableau visualization
+
+**[Explore the Community Collections Network Overview on Tableau Public](https://public.tableau.com/views/CommunityCollectionsNetworkOverview/Networkoverview?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)**
+
+The interactive dashboard presents the same fictional collection dataset used throughout this repository, with views designed for exploring network-wide trends and individual community collections.
 
 ## The question
 
@@ -63,7 +69,7 @@ Use `--ledger`, `--start`, `--months`, and `--out` with another ledger of the sa
 
 The `tableau/data/` folder includes four import-ready CSVs at separate, documented grains: 12 safe network-month totals, 432 community/family records, nine current community summaries, and ten quality findings. The [Tableau build guide](tableau/BUILD_GUIDE.md) explains the design and the [sheet-by-sheet workbook specification](tableau/WORKBOOK_SPEC.md) gives exact fields, calculations, dashboard structure, and checks for the [three-point story](tableau/STORYBOARD.md).
 
-The Tableau workbook is **not yet authored or published**. These files and instructions make it possible to build and verify one in Tableau Public without altering the Python/Matplotlib pipeline. The network table leaves April's total blank; summing the detailed rows across all communities would falsely turn the missing Echo Meadow report into a partial system total. A published Tableau URL can be added after the actual workbook has been created and checked.
+The completed workbook is published on Tableau Public as **[Community Collections Network Overview](https://public.tableau.com/views/CommunityCollectionsNetworkOverview/Networkoverview?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)**. It was built from the repository's Tableau-ready exports and preserves the project's treatment of missing, observed, and provisional data. In particular, the network table leaves April's total blank; summing the detailed rows across all communities would falsely turn the missing Echo Meadow report into a partial system total.
 
 ## Data contract
 
@@ -108,4 +114,4 @@ community-library-collection-analytics/
 
 ## License and Tableau status
 
-The Python source code is [MIT-licensed](LICENSE). The original fictional datasets, documentation, Markdown reports, and charts are [CC BY 4.0](LICENSE-CONTENT.md). The Tableau Public workbook has not yet been created. Add a Tableau Public link only once the live viz exists and has been checked against the sample outputs.
+The Python source code is [MIT-licensed](LICENSE). The original fictional datasets, documentation, Markdown reports, and charts are [CC BY 4.0](LICENSE-CONTENT.md). The companion Tableau Public workbook is now published and linked above.
