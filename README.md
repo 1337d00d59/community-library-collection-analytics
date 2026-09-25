@@ -1,4 +1,4 @@
-![Community Library Collection Analytics](docs/community-library-collection-analytics-preview.png)
+![Community Library Collection Analytics](docs/social_preview_1.png)
 # Community Library Collection Analytics
 
 A self-contained Python portfolio project that turns a **fictional collection-change ledger** into validated monthly statistics, four board-friendly Matplotlib charts, a concise Markdown brief, and an interactive Tableau Public visualization.
